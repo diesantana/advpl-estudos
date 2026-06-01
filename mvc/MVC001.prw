@@ -24,20 +24,20 @@ Define as operações da tela
 @author Diego
 @since 30/05/2026
 /*/
-Static Function MenuDef()
-	Local aRotina := {}
-
-	// Adiciona as opções de menu (3 = Incluir, 4 = Alterar, 5 = Excluir)
-	ADD OPTION aRotina TITLE 'Visualizar'   ACTION 'VIEWDEF.MVC001' OPERATION 2 ACCESS 0
-	ADD OPTION aRotina TITLE 'Incluir'      ACTION 'VIEWDEF.MVC001' OPERATION 3 ACCESS 0
-	ADD OPTION aRotina TITLE 'Alterar'      ACTION 'VIEWDEF.MVC001' OPERATION 4 ACCESS 0
-	ADD OPTION aRotina TITLE 'Excluir'      ACTION 'VIEWDEF.MVC001' OPERATION 5 ACCESS 0
-	ADD OPTION aRotina TITLE 'Imprimir'     ACTION 'VIEWDEF.MVC001' OPERATION 8 ACCESS 0
-	ADD OPTION aRotina TITLE 'Copiar'       ACTION 'VIEWDEF.MVC001' OPERATION 9 ACCESS 0
-Return aRotina
-
 // Static Function MenuDef()
-// Return FWMVCMenu("MVC001")
+// 	Local aRotina := {}
+
+// 	// Adiciona as opções de menu (3 = Incluir, 4 = Alterar, 5 = Excluir)
+// 	ADD OPTION aRotina TITLE 'Visualizar'   ACTION 'VIEWDEF.MVC001' OPERATION 2 ACCESS 0
+// 	ADD OPTION aRotina TITLE 'Incluir'      ACTION 'VIEWDEF.MVC001' OPERATION 3 ACCESS 0
+// 	ADD OPTION aRotina TITLE 'Alterar'      ACTION 'VIEWDEF.MVC001' OPERATION 4 ACCESS 0
+// 	ADD OPTION aRotina TITLE 'Excluir'      ACTION 'VIEWDEF.MVC001' OPERATION 5 ACCESS 0
+// 	ADD OPTION aRotina TITLE 'Imprimir'     ACTION 'VIEWDEF.MVC001' OPERATION 8 ACCESS 0
+// 	ADD OPTION aRotina TITLE 'Copiar'       ACTION 'VIEWDEF.MVC001' OPERATION 9 ACCESS 0
+// Return aRotina
+
+Static Function MenuDef()
+Return FWMVCMenu("MVC001")
 
 /*/{Protheus.doc} ModelDef
 Monta a estrutura de dados
@@ -45,6 +45,7 @@ Monta a estrutura de dados
 @author Diego
 @since 30/05/2026
 /*/
+
 Static Function ModelDef()
 	// Lê a estrutura da tabela SZ0 no Dicionário de Dados (1 = Model)
 	Local oStruSZ0 := FWFormStruct(1, 'SZ0')
